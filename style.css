@@ -20,7 +20,7 @@ body {
   color: var(--clr-dark);
   background-color: var(--clr-light);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
 }
@@ -28,21 +28,28 @@ body {
 .container {
   width: 80%;
   height: 700px;
-  margin: 0 auto;
+  margin: 50px;
   border: 10px solid var(--clr-dark);
 }
 
 .item {
   width: 150px;
   height: 150px;
-  background-color: #b2d8d8;
+  background-color: #ffee00;
   padding: 1em;
-  font-weight: 700;
+  font-weight: 1000;
   color: var(--clr-dark);
   text-align: center;
   border: 10px solid var(--clr-accent);
-  border-radius: 10px;
+  border-radius: 100px;
+  transition:transform 0.10 ease;
+ 
 }
+
+.item:hover {
+  transform: translatey(-30px)
+}
+
 /* END OF BASE STYLES */
 
 /* 1. Flex container */
@@ -68,13 +75,13 @@ body {
   /* align-items is for aligning the element on the cross axis (vertical when main axis is horizontal) */
   /* try */
   /* flex-start, flex-end, center,baseline */
-  align-items: flex-start;
+  align-items: center;
 
   /* by default, flex item will always try to fit in one line  */
   /* when there are more and more, the items will start crushing each other  */
   /* we can use flex-wrap: wrap; to allow items to take on a new line */
 
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 
   /* when we have flex-wrap: wrap; a new property is unlock, the align-content property */
   /* Properties value is more or less the same as justify-content */
@@ -86,7 +93,7 @@ body {
 }
 
 .item-1 {
-  font-size: 1.5rem;
+  font-size: 25px;
 }
 
 .item-2 {
